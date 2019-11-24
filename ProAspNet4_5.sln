@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyInvites", "PartyInvites\PartyInvites.csproj", "{8DEDC8D8-0D30-4C6D-BE1B-F051BC99EEDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore", "SportsStore\SportsStore.csproj", "{0CC2B4DC-F050-4508-B179-6D94E3AEFC06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DEDC8D8-0D30-4C6D-BE1B-F051BC99EEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DEDC8D8-0D30-4C6D-BE1B-F051BC99EEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DEDC8D8-0D30-4C6D-BE1B-F051BC99EEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DEDC8D8-0D30-4C6D-BE1B-F051BC99EEDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CC2B4DC-F050-4508-B179-6D94E3AEFC06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC2B4DC-F050-4508-B179-6D94E3AEFC06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC2B4DC-F050-4508-B179-6D94E3AEFC06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC2B4DC-F050-4508-B179-6D94E3AEFC06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8108454-9145-4DED-802E-BEF9E44CE218}
+	EndGlobalSection
+EndGlobal
