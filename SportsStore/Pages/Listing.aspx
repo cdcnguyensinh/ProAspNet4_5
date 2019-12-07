@@ -2,6 +2,8 @@
     MasterPageFile="/Pages/Store.Master"
     Inherits="SportsStore.Pages.Listing" %>
 
+<%@ Import Namespace="System.Web.Routing" %>
+
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="content">
         <%foreach (SportsStore.Models.Product prod in GetProducts())
@@ -13,12 +15,21 @@
                 Response.Write(string.Format("<h4>{0:c}</h4>",
                 prod.Price));
                 Response.Write("</div>");
-            }%>
+            }
+        %>
     </div>
     <div class="pager">
         <% for (int i = 1; i <= MaxPage; i++)
             {
                 Response.Write(string.Format("<a href='/Pages/Listing.aspx?page={0}'{1}>{2}</a>", i, i == CurrentPage ? "class='selected'" : "", i));
-            }%>
+            }
+        %>
+        <hr />
+        <% for (int i = 1; i <= MaxPage; i++)
+            {
+                string path = RouteTable.Routes.GetVirtualPath(null, null, new RouteValueDictionary() { { "page", i } }).VirtualPath;
+                Response.Write(string.Format("<a href='{0}' {1}>{2}</a>", path, i == CurrentPage ? "class='selected'" : "", i));
+            }
+        %>
     </div>
 </asp:Content>
