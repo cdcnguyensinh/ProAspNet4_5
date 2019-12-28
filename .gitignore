@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ProAspNet4_5/bin/Debug
+/ProAspNet4_5/obj/Debug
+/ProAspNet4_5/obj/Debug
+/ProAspNet4_5/bin/Debug
+
+/ProAspNet4_5/.vs/LoadStone
+/packages
