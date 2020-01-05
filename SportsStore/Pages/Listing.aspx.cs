@@ -16,13 +16,15 @@ namespace SportsStore.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
         }
+
         protected IEnumerable<Product> GetProducts()
         {
-            return repo.Products
+            return FilterProducts()
             .OrderBy(p => p.ProductID)
             .Skip((CurrentPage - 1) * pageSize)
             .Take(pageSize);
         }
+
         protected int CurrentPage
         {
             get
@@ -35,10 +37,19 @@ namespace SportsStore.Pages
         {
             get
             {
-                return (int)Math.Ceiling((decimal)repo.Products.Count() /
-                pageSize);
+                int prodCount = FilterProducts().Count();
+                return (int)Math.Ceiling((decimal)prodCount / pageSize);
             }
         }
+        private IEnumerable<Product> FilterProducts()
+        {
+            IEnumerable<Product> products = repo.Products;
+            string currentCategory = (string)RouteData.Values["category"] ??
+            Request.QueryString["category"];
+            return currentCategory == null ? products
+            : products.Where(p => p.Category == currentCategory);
+        }
+
         private int GetPageFromRequest()
         {
             int page;
